@@ -1,0 +1,21 @@
+{
+    "name": "naloga",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node ./bin/www",
+        "migrate:latest": "npx knex migrate:latest --cwd ./src/infrastructure",
+        "migrate:rollback": "npx knex migrate:rollback --cwd ./src/infrastructure",
+        "seed:run": "npx knex seed:run locations --cwd ./src/infrastructure"
+    },
+    "dependencies": {
+        "bookshelf": "^1.2.0",
+        "debug": "~2.6.9",
+        "express": "~4.16.1",
+        "faker": "^5.4.0",
+        "joi": "^17.4.0",
+        "knex": "^0.95.2",
+        "morgan": "~1.9.1",
+        "sqlite3": "^5.0.2"
+    }
+}
